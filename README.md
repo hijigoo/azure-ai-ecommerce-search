@@ -210,7 +210,17 @@ streamlit run app.py
 # 1. 사용자: "운동할 때 신을 편한 신발 추천해줘"
 # 2. 시스템: 하이브리드 검색으로 관련 상품 찾기
 # 3. GPT-4o: 검색된 상품 정보를 컨텍스트로 활용하여 자연스럽게 추천
-# 4🏗️ 아키텍처
+# 4. 응답: "고객님께 추천드리는 운동화는..."
+```
+
+### 🖼️ 이미지 기반 상품 정보 추출
+```python
+# GPT-4o Vision으로 상품 이미지 분석
+# → 색상, 스타일, 특징 자동 추출
+# → 검색 품질 향상을 위한 메타데이터 생성
+```
+
+## 🏗️ 아키텍처
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -282,30 +292,7 @@ streamlit run app.py
 
 ## 📄 라이선스
 
-이 프로젝트는 교육 및 학습개선**: 직관적인 UI와 빠른 응답 시간
-- ✅ **확장성**: Azure 클라우드 기반 인프라로 쉬운 스케일링
-
-## 📚 참고 자료
-
-- [Azure OpenAI 공식 문서](https://learn.microsoft.com/azure/ai-services/openai/)
-- [OpenAI API 레퍼런스](https://platform.openai.com/docs/api-reference)
-- [Azure AI Search 통합](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
-
-## 🔒 보안 및 주의사항
-
-- ⚠️ API 키는 절대 코드에 하드코딩하지 마세요
-- ⚠️ `.env` 파일은 `.gitignore`에 추가하세요
-- ⚠️ 실제 운영 환경에서는 Azure Key Vault 사용 권장
-- ⚠️ API 사용량 모니터링 및 비용 관리 필요
-
-## 💬 문의 및 지원
-
-- 기술 문의: Azure Support
-- 워크샵 관련: 발표자 이메일
-
-## 📄 라이선스
-
-이 워크샵 자료는 교육 목적으로 제공됩니다.
+이 프로젝트는 교육 및 학습 목적으로 제공됩니다.
 
 ---
 
