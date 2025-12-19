@@ -29,54 +29,55 @@ Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇
 4. **벡터 임베딩**: text-embedding-3-large를 활용한 의미 기반 검색
 5. **실시간 웹 애플리케이션**: Streamlit 기반 인터랙티브 UI
 
-## 📚 프로젝트 구조
+## 📚 프로젝트 구조 및 학습 순서
+
+이 워크샵은 단계별 Tutorial과 실전 Application으로 구성되어 있습니다. **Tutorial을 순서대로 완료한 후 Application을 실행**하세요.
 
 ### 📖 Tutorial (단계별 학습)
 
-#### [01. Introduction](tutorial/01_introduction.ipynb)
-- Azure OpenAI 서비스 개요
-- 환경 설정 및 API 연동
-- 기본 사용법 실습
+**1. [Introduction](tutorial/01_introduction.ipynb)** - Azure OpenAI 기본 설정
+   - Azure OpenAI 서비스 개요
+   - 환경 설정 및 API 연동
+   - 기본 사용법 실습
 
-#### [02. AI Search Setup](tutorial/02_aisearch_setup.ipynb)
-- Azure AI Search 인덱스 생성
-- 스키마 정의 (벡터 필드 포함)
-- 검색 설정 구성
+**2. [AI Search Setup](tutorial/02_aisearch_setup.ipynb)** - 검색 인덱스 생성
+   - Azure AI Search 인덱스 생성
+   - 스키마 정의 (벡터 필드 포함)
+   - 검색 설정 구성
 
-#### [03. Upload Sample Data](tutorial/03_upload_sample_data.ipynb)
-- 기본 상품 데이터 업로드
-- 임베딩 생성 및 저장
-- 인덱스 데이터 확인
+**3. [Upload Sample Data](tutorial/03_upload_sample_data.ipynb)** - 기본 데이터 업로드
+   - 기본 상품 데이터 업로드
+   - 임베딩 생성 및 저장
+   - 인덱스 데이터 확인
 
-#### [04. Search Data](tutorial/04_search_data.ipynb)
-- 키워드 검색 구현
-- 벡터 검색 구현
-- 하이브리드 검색 구현
+**4. [Search Data](tutorial/04_search_data.ipynb)** - 검색 기능 구현
+   - 키워드 검색 (BM25)
+   - 벡터 검색 (HNSW)
+   - 하이브리드 검색 (RRF)
 
-#### [05. Synonym Search](tutorial/05_synonym_search_data.ipynb)
-- 동의어 맵 설정
-- 검색 고도화
+**5. [Synonym Search](tutorial/05_synonym_search_data.ipynb)** - 검색 고도화
+   - 동의어 맵 설정
+   - 검색 품질 향상
 
-#### [06. Image to Product Info](tutorial/06_image_to_product_info.ipynb)
-- GPT-4o Vision API 활용
-- 이미지 분석 및 속성 추출
-- 구조화된 데이터로 변환
+**6. [Image to Product Info](tutorial/06_image_to_product_info.ipynb)** - 이미지 분석
+   - GPT-4o Vision API 활용
+   - 이미지 분석 및 속성 추출
+   - 구조화된 데이터로 변환
 
-#### [07. Upload Augmented Data](tutorial/07_upload_augmented_data.ipynb)
-- 이미지 분석 결과로 데이터 증강
-- 풍부한 상품 정보 업로드
+**7. [Upload Augmented Data](tutorial/07_upload_augmented_data.ipynb)** - 데이터 증강
+   - 이미지 분석 결과로 데이터 증강
+   - 풍부한 상품 정보 업로드
 
-#### [08. Search Augmented Data](tutorial/08_search_augmented_data.ipynb)
-- 증강된 데이터로 검색 품질 향상
-- 이미지 캡션, 태그 활용 검색
+**8. [Search Augmented Data](tutorial/08_search_augmented_data.ipynb)** - 최종 검색 최적화
+   - 증강된 데이터로 검색 품질 향상
+   - 이미지 캡션, 태그 활용 검색
 
 ### 🚀 Application (실전 애플리케이션)
 
-#### [Streamlit Web App](app/)
-완전한 기능을 갖춘 이커머스 검색 및 챗봇 애플리케이션
+**9. [Streamlit Web App](app/)** - 완성된 이커머스 애플리케이션
 
-> ⚠️ **중요**: 이 애플리케이션은 위의 Tutorial에서 생성한 Azure AI Search 인덱스와 데이터를 사용합니다. 
-> 애플리케이션을 실행하기 전에 **Tutorial 01-08을 순서대로 모두 완료**하여 인덱스와 상품 데이터를 먼저 준비해야 합니다.
+> ⚠️ **중요**: 이 애플리케이션은 위의 Tutorial 1-8에서 생성한 Azure AI Search 인덱스와 데이터를 사용합니다. 
+> 애플리케이션 실행 전에 **Tutorial을 순서대로 모두 완료**하세요.
 
 **주요 기능:**
 - 📦 **상품 목록 모드**
@@ -190,21 +191,6 @@ streamlit run app.py
 
 # 브라우저에서 http://localhost:8501 자동 열림
 ```
-
-## 📝 학습 순서
-
-### Tutorial (단계별 학습)
-1. **01_introduction.ipynb**: Azure OpenAI 기본 설정 및 연동
-2. **02_aisearch_setup.ipynb**: AI Search 인덱스 생성
-3. **03_upload_sample_data.ipynb**: 샘플 데이터 업로드
-4. **04_search_data.ipynb**: 키워드/벡터/하이브리드 검색 실습
-5. **05_synonym_search_data.ipynb**: 동의어 검색 구현
-6. **06_image_to_product_info.ipynb**: 이미지 분석 및 정보 추출
-7. **07_upload_augmented_data.ipynb**: 증강된 데이터 업로드
-8. **08_search_augmented_data.ipynb**: 증강 데이터로 검색 품질 향상
-
-### Application (실전 적용)
-9. **app/app.py**: 완성된 Streamlit 웹 애플리케이션 실행 및 테스트
 
 ## 💡 주요 기능 예시
 
