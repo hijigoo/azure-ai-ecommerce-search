@@ -37,16 +37,17 @@ Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇
 3. **[03_upload_sample_data.ipynb](tutorial/03_upload_sample_data.ipynb)**: 샘플 데이터 업로드
 4. **[04_search_data.ipynb](tutorial/04_search_data.ipynb)**: 키워드/벡터/하이브리드 검색 실습
 5. **[05_synonym_search_data.ipynb](tutorial/05_synonym_search_data.ipynb)**: 동의어 검색 구현
-6. **[06_image_to_product_info.ipynb](tutorial/06_image_to_product_info.ipynb)**: 이미지 분석 및 정보 추출
-7. **[07_upload_augmented_data.ipynb](tutorial/07_upload_augmented_data.ipynb)**: 증강된 데이터 업로드
-8. **[08_search_augmented_data.ipynb](tutorial/08_search_augmented_data.ipynb)**: 증강 데이터로 검색 품질 향상
+6. **[06_weighted_field_search.ipynb](tutorial/06_weighted_field_search.ipynb)**: 텍스트 가중 필드 검색
+7. **[07_image_to_product_info.ipynb](tutorial/07_image_to_product_info.ipynb)**: 이미지 분석 및 정보 추출
+8. **[08_upload_augmented_data.ipynb](tutorial/08_upload_augmented_data.ipynb)**: 증강된 데이터 업로드
+9. **[09_search_augmented_data.ipynb](tutorial/09_search_augmented_data.ipynb)**: 증강 데이터로 검색 품질 향상
 
 ### Application (실전 애플리케이션)
-9. **[app/](app/)**: Streamlit 웹 애플리케이션
+10. **[app/](app/)**: Streamlit 웹 애플리케이션
    - 상품 검색 (키워드/벡터/하이브리드)
    - RAG 기반 AI 챗봇
 
-> ⚠️ **중요**: Application은 Tutorial 1-8에서 생성한 인덱스를 사용합니다. Tutorial을 먼저 완료하세요.
+> ⚠️ **중요**: Application은 Tutorial 1-9에서 생성한 인덱스를 사용합니다. Tutorial을 먼저 완료하세요.
 
 ## 🛠 사전 준비사항
 

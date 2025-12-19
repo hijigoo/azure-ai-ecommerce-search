@@ -35,18 +35,24 @@ AI Search 인덱스 생성
 - 동의어 맵 설정
 - 검색 품질 향상
 
-### 6. [06_image_to_product_info.ipynb](06_image_to_product_info.ipynb)
+### 6. [06_weighted_field_search.ipynb](06_weighted_field_search.ipynb)
+텍스트 가중 필드 검색
+- 필드별 가중치 적용 (name^3, brand^2, description^1)
+- 가중치 효과 비교
+- 하이브리드 검색과 필드 가중치 조합
+
+### 7. [07_image_to_product_info.ipynb](07_image_to_product_info.ipynb)
 이미지 기반 상품 정보 추출
 - GPT-4o Vision으로 이미지 분석
 - 이미지 캡션/설명/태그 자동 생성
 - 증강 데이터 생성 (`data/sample_products_augmented.json`)
 
-### 7. [07_upload_augmented_data.ipynb](07_upload_augmented_data.ipynb)
+### 8. [08_upload_augmented_data.ipynb](08_upload_augmented_data.ipynb)
 증강된 데이터 업로드
 - 이미지 분석 결과 포함된 데이터 업로드
 - 이미지 캡션/설명/태그 벡터화
 
-### 8. [08_search_augmented_data.ipynb](08_search_augmented_data.ipynb)
+### 9. [09_search_augmented_data.ipynb](09_search_augmented_data.ipynb)
 증강 데이터로 검색 품질 향상 확인
 - 이미지 정보를 활용한 검색 테스트
 - 검색 정확도 비교
@@ -78,7 +84,7 @@ jupyter notebook
 
 ### 3. 노트북 순서대로 실행
 
-01번부터 08번까지 순서대로 셀을 실행하세요.
+01번부터 09번까지 순서대로 셀을 실행하세요.
 
 ## 📦 필요한 패키지
 
