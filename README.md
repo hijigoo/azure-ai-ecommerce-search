@@ -31,75 +31,22 @@ Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇
 
 ## 📚 프로젝트 구조 및 학습 순서
 
-이 워크샵은 단계별 Tutorial과 실전 Application으로 구성되어 있습니다. **Tutorial을 순서대로 완료한 후 Application을 실행**하세요.
+### Tutorial (단계별 학습)
+1. **[01_introduction.ipynb](tutorial/01_introduction.ipynb)**: Azure OpenAI 기본 설정 및 연동
+2. **[02_aisearch_setup.ipynb](tutorial/02_aisearch_setup.ipynb)**: AI Search 인덱스 생성
+3. **[03_upload_sample_data.ipynb](tutorial/03_upload_sample_data.ipynb)**: 샘플 데이터 업로드
+4. **[04_search_data.ipynb](tutorial/04_search_data.ipynb)**: 키워드/벡터/하이브리드 검색 실습
+5. **[05_synonym_search_data.ipynb](tutorial/05_synonym_search_data.ipynb)**: 동의어 검색 구현
+6. **[06_image_to_product_info.ipynb](tutorial/06_image_to_product_info.ipynb)**: 이미지 분석 및 정보 추출
+7. **[07_upload_augmented_data.ipynb](tutorial/07_upload_augmented_data.ipynb)**: 증강된 데이터 업로드
+8. **[08_search_augmented_data.ipynb](tutorial/08_search_augmented_data.ipynb)**: 증강 데이터로 검색 품질 향상
 
-### 📖 Tutorial (단계별 학습)
+### Application (실전 애플리케이션)
+9. **[app/](app/)**: Streamlit 웹 애플리케이션
+   - 상품 검색 (키워드/벡터/하이브리드)
+   - RAG 기반 AI 챗봇
 
-**1. [Introduction](tutorial/01_introduction.ipynb)** - Azure OpenAI 기본 설정
-   - Azure OpenAI 서비스 개요
-   - 환경 설정 및 API 연동
-   - 기본 사용법 실습
-
-**2. [AI Search Setup](tutorial/02_aisearch_setup.ipynb)** - 검색 인덱스 생성
-   - Azure AI Search 인덱스 생성
-   - 스키마 정의 (벡터 필드 포함)
-   - 검색 설정 구성
-
-**3. [Upload Sample Data](tutorial/03_upload_sample_data.ipynb)** - 기본 데이터 업로드
-   - 기본 상품 데이터 업로드
-   - 임베딩 생성 및 저장
-   - 인덱스 데이터 확인
-
-**4. [Search Data](tutorial/04_search_data.ipynb)** - 검색 기능 구현
-   - 키워드 검색 (BM25)
-   - 벡터 검색 (HNSW)
-   - 하이브리드 검색 (RRF)
-
-**5. [Synonym Search](tutorial/05_synonym_search_data.ipynb)** - 검색 고도화
-   - 동의어 맵 설정
-   - 검색 품질 향상
-
-**6. [Image to Product Info](tutorial/06_image_to_product_info.ipynb)** - 이미지 분석
-   - GPT-4o Vision API 활용
-   - 이미지 분석 및 속성 추출
-   - 구조화된 데이터로 변환
-
-**7. [Upload Augmented Data](tutorial/07_upload_augmented_data.ipynb)** - 데이터 증강
-   - 이미지 분석 결과로 데이터 증강
-   - 풍부한 상품 정보 업로드
-
-**8. [Search Augmented Data](tutorial/08_search_augmented_data.ipynb)** - 최종 검색 최적화
-   - 증강된 데이터로 검색 품질 향상
-   - 이미지 캡션, 태그 활용 검색
-
-### 🚀 Application (실전 애플리케이션)
-
-**9. [Streamlit Web App](app/)** - 완성된 이커머스 애플리케이션
-
-> ⚠️ **중요**: 이 애플리케이션은 위의 Tutorial 1-8에서 생성한 Azure AI Search 인덱스와 데이터를 사용합니다. 
-> 애플리케이션 실행 전에 **Tutorial을 순서대로 모두 완료**하세요.
-
-**주요 기능:**
-- 📦 **상품 목록 모드**
-  - 3x3 그리드 레이아웃 (페이지당 9개 상품)
-  - 키워드/벡터/하이브리드 검색
-  - 검색 범위 선택 (상품명, 브랜드, 설명, 이미지 정보 등)
-  - 페이지네이션 및 관련도 점수 표시
-
-- 💬 **AI 챗봇 모드**
-  - RAG 기반 자연어 상품 추천
-  - 하이브리드 검색으로 관련 상품 찾기
-  - GPT-4o로 자연스러운 추천 설명 생성
-  - 대화 히스토리 유지 및 컨텍스트 활용
-  - 상품 상세 정보 펼치기/접기
-
-**실행 방법:**
-```bash
-cd app
-streamlit run app.py
-```
-
-자세한 내용은 [app/README.md](app/README.md)를 참조하세요.
+> ⚠️ **중요**: Application은 Tutorial 1-8에서 생성한 인덱스를 사용합니다. Tutorial을 먼저 완료하세요.
 
 ## 🛠 사전 준비사항
 
@@ -192,31 +139,6 @@ streamlit run app.py
 # 브라우저에서 http://localhost:8501 자동 열림
 ```
 
-## 💡 주요 기능 예시
-
-### 🔍 하이브리드 검색
-```python
-# 키워드 + 벡터 검색 결합으로 최적의 결과 제공
-# 예: "여름에 입을 시원한 티셔츠"
-# → 키워드: "티셔츠", "여름"
-# → 벡터: 의미 유사도 (시원함, 가벼움, 반팔 등)
-```
-
-### 🤖 RAG 기반 챗봇
-```python
-# 1. 사용자: "운동할 때 신을 편한 신발 추천해줘"
-# 2. 시스템: 하이브리드 검색으로 관련 상품 찾기
-# 3. GPT-4o: 검색된 상품 정보를 컨텍스트로 활용하여 자연스럽게 추천
-# 4. 응답: "고객님께 추천드리는 운동화는..."
-```
-
-### 🖼️ 이미지 기반 상품 정보 추출
-```python
-# GPT-4o Vision으로 상품 이미지 분석
-# → 색상, 스타일, 특징 자동 추출
-# → 검색 품질 향상을 위한 메타데이터 생성
-```
-
 ## 🏗️ 아키텍처
 
 ```
@@ -254,23 +176,7 @@ streamlit run app.py
 └──────────────────┘              └──────────────────┘
 ```
 
-## 📚 참고 자료
-
-### Azure 공식 문서
-- [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/)
-- [Azure AI Search](https://learn.microsoft.com/azure/search/)
-- [Vector Search in Azure AI Search](https://learn.microsoft.com/azure/search/vector-search-overview)
-- [Hybrid Search (RRF)](https://learn.microsoft.com/azure/search/hybrid-search-ranking)
-
-### API 레퍼런스
-- [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
-- [Azure AI Search REST API](https://learn.microsoft.com/rest/api/searchservice/)
-
-### RAG 및 벡터 검색
-- [Retrieval Augmented Generation (RAG)](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview)
-- [Vector Embeddings](https://learn.microsoft.com/azure/ai-services/openai/concepts/understand-embeddings)
-
-## 🔒 보안 및 주의사항
+##  보안 및 주의사항
 
 - ⚠️ **API 키 보안**: 절대 코드에 하드코딩하지 말고 환경 변수 사용
 - ⚠️ **`.env` 파일**: `.gitignore`에 추가하여 버전 관리에서 제외
@@ -282,16 +188,6 @@ streamlit run app.py
 - ⚠️ **RBAC 권한**: 
   - Search Index Data Reader
   - Cognitive Services OpenAI User
-
-## 💬 문의 및 지원
-
-- **Azure 기술 지원**: [Azure Support](https://azure.microsoft.com/support/)
-- **이슈 리포트**: GitHub Issues
-- **문서 업데이트**: Pull Requests 환영
-
-## 📄 라이선스
-
-이 프로젝트는 교육 및 학습 목적으로 제공됩니다.
 
 ---
 
