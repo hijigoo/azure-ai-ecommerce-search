@@ -154,7 +154,7 @@ EMBEDDING_DIMENSION=3072
 
 ```bash
 # 1. 리포지토리 이동
-cd aoai-workshop
+cd azure-ai-ecommerce-search
 
 # 2. 가상환경 생성 (선택사항)
 python -m venv venv
