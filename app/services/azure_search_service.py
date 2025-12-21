@@ -72,7 +72,7 @@ class AzureSearchService:
         search_params = {
             "search_text": query,
             "top": top_k,
-            "query_type": "full",
+
             "select": ["id", "name", "brand", "description", "price", 
                       "imageUrl", "imageCaption", "imageDescription", "imageTags"]
         }

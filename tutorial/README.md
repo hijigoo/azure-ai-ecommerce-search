@@ -36,10 +36,11 @@ AI Search 인덱스 생성
 - 검색 품질 향상
 
 ### 6. [06_weighted_field_search.ipynb](06_weighted_field_search.ipynb)
-텍스트 가중 필드 검색
-- 필드별 가중치 적용 (name^3, brand^2, description^1)
-- 가중치 효과 비교
-- 하이브리드 검색과 필드 가중치 조합
+점수 매기기 프로필 (Scoring Profile)
+- Scoring Profile 생성 및 적용
+- 필드별 가중치 설정 (name: 3.0, brand: 2.0, description: 1.0)
+- Scoring Profile 효과 비교
+- 하이브리드 검색과 Scoring Profile 조합
 
 ### 7. [07_image_to_product_info.ipynb](07_image_to_product_info.ipynb)
 이미지 기반 상품 정보 추출

@@ -37,7 +37,7 @@ Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇
 3. **[03_upload_sample_data.ipynb](tutorial/03_upload_sample_data.ipynb)**: 샘플 데이터 업로드
 4. **[04_search_data.ipynb](tutorial/04_search_data.ipynb)**: 키워드/벡터/하이브리드 검색 실습
 5. **[05_synonym_search_data.ipynb](tutorial/05_synonym_search_data.ipynb)**: 동의어 검색 구현
-6. **[06_weighted_field_search.ipynb](tutorial/06_weighted_field_search.ipynb)**: 텍스트 가중 필드 검색
+6. **[06_weighted_field_search.ipynb](tutorial/06_weighted_field_search.ipynb)**: 점수 매기기 프로필 (Scoring Profile)
 7. **[07_image_to_product_info.ipynb](tutorial/07_image_to_product_info.ipynb)**: 이미지 분석 및 정보 추출
 8. **[08_upload_augmented_data.ipynb](tutorial/08_upload_augmented_data.ipynb)**: 증강된 데이터 업로드
 9. **[09_search_augmented_data.ipynb](tutorial/09_search_augmented_data.ipynb)**: 증강 데이터로 검색 품질 향상
