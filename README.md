@@ -5,12 +5,12 @@ Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇
 ## 👩🏻‍💻 데모 스크린샷
 
 ### 상품 검색
-- 키워드/벡터/하이브리 검색 - 벡터라이즈, 증강데이터, 동의어, 스코어링 프로필
+키워드/벡터/하이브리 검색 - 벡터라이즈, 증강데이터, 동의어, 스코어링 프로필
 
 ![상품 검색 화면](https://github.com/user-attachments/assets/6e748d01-2720-442e-b851-8ba6183b2e2b)
 
 ### AI 챗봇
-- RAG 기반 검색 및 추천
+RAG 기반 검색 및 추천
 
 ![AI 챗봇 화면](https://github.com/user-attachments/assets/8c2ddec1-8d53-43a2-a365-e68328099650)
 
