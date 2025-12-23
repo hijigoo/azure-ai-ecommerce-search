@@ -1,4 +1,4 @@
-# Azure OpenAI 이커머스 워크샵
+# Azure OpenAI & AI Search 이커머스 워크샵
 
 Azure OpenAI와 AI Search를 활용한 이커머스 검색 및 RAG 기반 챗봇 워크샵 자료입니다.
 
